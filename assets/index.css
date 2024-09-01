@@ -1,23 +1,28 @@
-.small-btn {
-  font-size: 10px;
-  color: black;
-  background-color: lightblue;
+/* == END == */
+.button {
+  background-color: teal;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.button:hover, .button:focus {
+  color: blue;
 }
 
-/* == END == */
-body {
-  min-width: 100vw;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-          align-items: center;
+.button-icon {
+  width: 20px;
+  height: 20px;
+}
+.button-icon:hover {
+  width: 50px;
+  height: 50px;
+}
+.button:hover .button-icon {
+  font-size: 20px;
+}
+
+.button-label {
+  font-size: 16px;
+}
+.button:hover .button-label {
+  font-size: 20px;
 }
