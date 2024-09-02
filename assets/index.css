@@ -1,28 +1,50 @@
 /* == END == */
-.button {
-  background-color: teal;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.button:hover, .button:focus {
-  color: blue;
-}
-
-.button-icon {
-  width: 20px;
-  height: 20px;
-}
-.button-icon:hover {
-  width: 50px;
-  height: 50px;
-}
-.button:hover .button-icon {
-  font-size: 20px;
+.badge-info {
+  color: #b5b5be;
+  font-size: 14px;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.5px;
+  text-align: right;
 }
 
-.button-label {
-  font-size: 16px;
+.badge {
+  min-width: 96px;
+  padding: 4px 8px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857%*/
+  letter-spacing: 0.07px;
+  border-radius: 20px;
+  background-color: #92929d;
 }
-.button:hover .button-label {
-  font-size: 20px;
+
+.bage-name {
+  background-color: #a461d8;
+}
+
+.bage-name {
+  background-color: #fc5a5a;
+}
+
+.bage-name {
+  background-color: #82c43c;
+}
+
+.dog-icon {
+  background-image: url("../images/dog.png");
+}
+
+.cat-icon {
+  background-image: url("../images/cat.png");
+}
+
+.bird-icon {
+  background-image: url("../images/bird.png");
+}
+
+.turtle-icon {
+  background-image: url("../images/turtle.png");
 }
