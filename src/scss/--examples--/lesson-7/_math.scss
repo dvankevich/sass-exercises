@@ -1,0 +1,35 @@
+.box {
+  width: 600px + 20px;
+  width: calc(600px - 50%);
+}
+
+$value: 600px;
+
+.box {
+  width: 600px * 2;
+  width: 600px * 2 + 50px;
+  width: (600px + 50px) * 2;
+
+  width: calc($value / 5);
+  width: calc(600px / 5);
+
+  width: calc(600px / 5px) + 10px;
+
+  @debug calc(600px / 5px); // 120
+  @debug 120 + 10px; // 130px
+  //   Recommendation: math.div(600px, 5px) or calc(600px / 5px)
+
+  // More info and automated migrator: https://sass-lang.com/d/slash-div
+}
+
+$name: "box";
+$margin: 100px;
+
+.box {
+  margin: $margin * 2; // margin: 200px;
+  margin: calc(#{$margin} * 2); // margin: calc(100px * 2);
+}
+
+.#{$name} {
+  margin: $margin;
+}
