@@ -1,15 +1,48 @@
 /* == END == */
-.btn-success {
-  border: 2px solid lightgreen;
-  color: lightgreen;
+.p-8 {
+  padding: 8px;
 }
 
-.btn-error {
-  border: 2px solid red;
-  color: red;
+.p-16 {
+  padding: 16px;
 }
 
-.btn-info {
-  border: 2px solid lightblue;
-  color: lightblue;
+.p-20 {
+  padding: 20px;
+}
+
+.p-24 {
+  padding: 24px;
+}
+
+.margin-sm {
+  margin: 24px;
+}
+
+.margin-md {
+  margin: 32px;
+}
+
+.margin-lg {
+  margin: 36px;
+}
+
+.margin-xl {
+  margin: 68px;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
 }
