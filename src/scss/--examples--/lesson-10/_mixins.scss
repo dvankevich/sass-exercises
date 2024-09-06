@@ -87,15 +87,31 @@
 
 // @include btn-size(".btn-sm", ".btn-md", ".btn-lg", ".btn-xl", ".btn-xxl");
 
-@use "sass:meta"; // імпорт модуля meta
+// @use "sass:meta"; // імпорт модуля meta
 
-@mixin btn-type($types...) {
-  @each $name, $color in meta.keywords($types) {
-    .btn-#{$name} {
-      border: 2px solid $color;
-      color: $color;
-    }
+// @mixin btn-type($types...) {
+//   @each $name, $color in meta.keywords($types) {
+//     .btn-#{$name} {
+//       border: 2px solid $color;
+//       color: $color;
+//     }
+//   }
+// }
+
+// @include btn-type($success: lightgreen, $error: red, $info: lightblue);
+
+@mixin hover($state) {
+  &:not([#{$state}]):hover {
+    @content;
   }
 }
 
-@include btn-type($success: lightgreen, $error: red, $info: lightblue);
+.button {
+  background-color: white;
+  border: 1px solid darkblue;
+
+  @include hover($state: disabled) {
+    color: white;
+    background-color: darkblue;
+  }
+}
