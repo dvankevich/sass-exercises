@@ -1,0 +1,22 @@
+// for at-rule with calculations
+$base-weight: 400;
+
+// включає 3
+@for $i from 0 through 3 {
+  .fw-#{$base-weight+($i * 100)} {
+    font-weight: $base-weight + ($i * 100);
+  }
+}
+
+// difference between "through" and "to"
+// не включає 3
+// @for $i from 0 to 3 {
+//   @debug $i;
+// }
+
+$n: 0;
+
+// не рекомендують використовувати
+@while $n < 4 {
+  $n: $n + 1;
+}
