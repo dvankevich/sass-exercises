@@ -1,0 +1,56 @@
+@use "sass:list";
+
+// $number: 12; // числа
+// $string: "grid"; // рядки
+// $boolean: false; // булеві значення
+// $empty: null; // відсутність значення
+
+// list examples
+$list: 8, 10, 12, 14, 16; // розділено комами
+$list: (
+  8,
+  10,
+  12,
+  14,
+  16
+); // також список можна брати в дужки, але це необов'язково
+$list: 1px solid red; // розділено пробілами
+
+// list.nth() function
+// нумерація починається з 1
+$numbers: 10px, 12px, 16px;
+@debug list.nth($numbers, 2); // 2 елемент 12px
+@debug list.nth($numbers, -1); // перший елемент з кінця списку 16px
+
+// list.length() function
+$colors: lightgreen, tomato, lightblue;
+@debug list.length($colors); // 3
+
+// use list with @each
+$sizes: 40px, 50px, 80px;
+
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size;
+    height: $size;
+    width: $size;
+  }
+}
+
+// use list with @for
+$button-types: ".btn-sm", ".btn-md", ".btn-lg", ".btn-xl", ".btn-xxl";
+
+@mixin btn-size($types) {
+  @for $i from 1 through list.length($types) {
+    #{list.nth($types, $i)} {
+      $factor: (
+        $i * 5 - 5
+      );
+
+    padding: (5px + $factor) (10px + $factor);
+    border-radius: (10px + $factor);
+  }
+}
+}
+
+@include btn-size($button-types);
